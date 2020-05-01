@@ -1,0 +1,97 @@
+// Primary
+$SoftBlue: hsl(231, 69%, 60%);
+$SoftRed: hsl(0, 94%, 66%);
+
+// Neutral
+$GrayishBlue: hsl(229, 8%, 60%);
+$VeryDarkBlue: hsl(229, 31%, 21%);
+
+.divFeatures {
+  font-family: 'Rubik', sans-serif;
+  color: $VeryDarkBlue;
+
+  margin-top: 50px;
+  margin-bottom: 15px;
+
+
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  justify-content: space-between;
+
+  .blockFeatures {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    .h1 {
+      margin: 30px auto 0px;
+      width: 60%;
+
+      font-size: 32px;
+      font-weight: 700;
+      text-align: center;
+    }
+    .p {
+      margin: 25px auto 0px;
+      width: 50%;
+
+      color: $GrayishBlue;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: normal;
+      text-align: center;
+    }
+    .blockTabs {
+      margin-top: 25px;
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      .tabs {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 200px;
+        font-size: 14px;
+        color: $GrayishBlue;
+        border-bottom: 1px solid $GrayishBlue;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .active {
+        font-weight: 600;
+        color: $VeryDarkBlue;
+        border-bottom: 2px solid $SoftRed;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .divFeatures {
+    img {
+      width: 60%;
+    }
+    .h1 {
+      width: 80%;
+    }
+    .p {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .divFeatures {
+    img {
+      width: 80%;
+    }
+    .h1 {
+      width: 80%;
+    }
+    .p {
+      width: 80%;
+    }
+  }
+}

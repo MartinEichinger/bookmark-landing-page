@@ -1,0 +1,214 @@
+// Primary
+$SoftBlue: hsl(231, 69%, 60%);
+$SoftRed: hsl(0, 94%, 66%);
+
+// Neutral
+$GrayishBlue: hsl(229, 8%, 60%);
+$VeryDarkBlue: hsl(229, 31%, 21%);
+
+.divBookmarkManager {
+  font-family: 'Rubik', sans-serif;
+  color: $VeryDarkBlue;
+
+  margin-top: 100px;
+
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  justify-content: space-between;
+
+  .blockImg {
+    margin-left: 0%;
+    margin-top: 8%;
+    margin-bottom: 5%;
+    padding-top: 0%;
+    padding-bottom: 5%;
+    border-radius: 100px 0px 0px 100px;
+    background-color: $SoftBlue;
+    width: 40%;
+    img {
+      margin-top: -25%;
+      margin-left: -35%;
+      width: 100%;
+    }
+  }
+  .blockBookmark {
+    width: 50%;
+    .h1 {
+      margin: 30px auto 0px;
+      width: 80%;
+
+      font-size: 32px;
+      font-weight: 700;
+      text-align: left;
+    }
+    .p {
+      margin: 25px auto 0px;
+      width: 80%;
+
+      color: $GrayishBlue;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: normal;
+      text-align: left;
+    }
+    .blockButton {
+      margin-top: 25px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      .button {
+        margin-right: 15px;
+        padding: 10px;
+        width: 100px;
+        border-radius: 5px;
+        font-size: 12px;
+        color: $VeryDarkBlue;
+        border: 1px solid $VeryDarkBlue;
+        background-color: white;
+        cursor: pointer;
+        text-decoration: none;
+        &:hover {
+          color: $SoftBlue;
+          border-color: $SoftBlue;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .divBookmarkManager {
+    img {
+      width: 60%;
+    }
+    .h1 {
+      width: 80%;
+    }
+    .p {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .divBookmarkManager {
+    img {
+      width: 80%;
+    }
+    .h1 {
+      width: 80%;
+    }
+    .p {
+      width: 80%;
+    }
+  }
+}
+
+.divFeatures {
+  .divFeaturesTabsI, .divFeaturesTabsII, .divFeaturesTabsIII {
+    font-family: 'Rubik', sans-serif;
+    color: $VeryDarkBlue;
+
+    margin-top: 20px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    .blockImg {
+      //margin-left: 0%;
+      margin-top: 12%;
+      margin-bottom: 5%;
+      padding-top: 0%;
+      padding-bottom: 5%;
+      border-radius: 0px 100px 100px 0px;
+      background-color: $SoftBlue;
+      width: 40%;
+      //height: 50px;
+      img {
+        margin-top: -25%;
+        margin-left: 20%;
+        width: 100%;
+      }
+    }
+    .blockFeature {
+      width: 50%;
+      .h1 {
+        margin: 30px auto 0px;
+        width: 80%;
+
+        font-size: 32px;
+        font-weight: 700;
+        text-align: left;
+      }
+      .p {
+        margin: 25px auto 0px;
+        width: 80%;
+
+        color: $GrayishBlue;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+        text-align: left;
+      }
+      .blockButton {
+        margin-top: 25px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        .button {
+          margin-right: 15px;
+          padding: 10px;
+          width: 100px;
+          border-radius: 5px;
+          font-size: 12px;
+          color: $VeryDarkBlue;
+          border: 1px solid $VeryDarkBlue;
+          background-color: white;
+          cursor: pointer;
+          text-decoration: none;
+          &:hover {
+            color: $SoftBlue;
+            border-color: $SoftBlue;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .divFeaturesTabsI {
+    img {
+      width: 60%;
+    }
+    .h1 {
+      width: 80%;
+    }
+    .p {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .divFeaturesTabsI {
+    img {
+      width: 80%;
+    }
+    .h1 {
+      width: 80%;
+    }
+    .p {
+      width: 80%;
+    }
+  }
+}

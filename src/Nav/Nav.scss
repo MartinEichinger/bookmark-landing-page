@@ -1,0 +1,49 @@
+// Primary
+$SoftBlue: hsl(231, 69%, 60%);
+$SoftRed: hsl(0, 94%, 66%);
+
+// Neutral
+$GrayishBlue: hsl(229, 8%, 60%);
+$VeryDarkBlue: hsl(229, 31%, 21%);
+
+.header{
+  font-family: 'Rubik', sans-serif;
+  width: 90%;
+  margin: 30px auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  img {
+    display: flex;
+    width: 120px;
+    height: 100%;
+  }
+  .navigation {
+    width: 50%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    a {
+      color: $VeryDarkBlue;
+      text-decoration: none;
+      &:hover {
+        color: $SoftRed;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+
+  }
+}

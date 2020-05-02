@@ -1,0 +1,195 @@
+// Primary
+$SoftBlue: hsl(231, 69%, 60%);
+$SoftRed: hsl(0, 94%, 66%);
+
+// Neutral
+$GrayishBlue: hsl(229, 8%, 60%);
+$VeryDarkBlue: hsl(229, 31%, 21%);
+
+.divCardChrome, .divCardFirefox, .divCardOpera {
+  font-family: 'Rubik', sans-serif;
+  color: $VeryDarkBlue;
+
+  width: 300px;
+  height: 300px;
+  margin-top: 50px;
+  margin-right: 20px;
+  //box-shadow: 2px 6px 12px 0px $GrayishBlue;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0,0,0,0);
+
+
+}
+
+.divCardChrome {
+  margin-bottom: 50px;
+  .flip-card-inner {
+    .flip-card-front {
+      background-image: url("bg-chrome.jpg");
+      background-color: black;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.divCardFirefox {
+  margin-top: 75px;
+  margin-bottom: 25px;
+  .flip-card-inner {
+    .flip-card-front {
+      background-image: url("bg-firefox.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.divCardOpera {
+  margin-top: 100px;
+  .flip-card-inner {
+    .flip-card-front {
+      background-image: url("bg-opera.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 275px;
+  perspective: 1000px;
+  &:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card-inner {
+    position: relative;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  .flip-card-front, .flip-card-back {
+    border-radius: 5px;
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .flip-card-front {
+    background-color: white;
+    color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .blockImg {
+      width: 60%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .flip-card-back {
+    background-color: white;
+    //color: white;
+    transform: rotateY(180deg);
+    .blockImg {
+      margin: 25px auto 0px;
+      width: 40%;
+      img {
+        width: 100%;
+      }
+    }
+    .blockCard {
+      width: 100%;
+      .h1 {
+        width: 100%;
+        margin-top: 10px;
+
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        line-height: normal;
+      }
+      .p {
+        width: 100%;
+        margin-top: 10px;
+
+        color: $GrayishBlue;
+        font-size: 12px;
+        line-height: normal;
+        text-align: center;
+      }
+      .blockButton {
+        border-top: 1px dotted $GrayishBlue;
+        border-top-style: dotted;
+        margin-top: 25px;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        p {
+          margin-left: auto;
+          margin-right: auto;
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid white;
+
+          font-size: 12px;
+          color: white;
+          background-color: $SoftBlue;
+          cursor: pointer;
+          text-decoration: none;
+          &:hover {
+            color: $SoftBlue;
+            border: 1px solid $SoftBlue;
+            background-color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .divCardChrome, .divCardFirefox, .divCardOpera {
+    img {
+      width: 60%;
+    }
+    .h1 {
+      width: 80%;
+    }
+    .p {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .divCardChrome, .divCardFirefox, .divCardOpera {
+    img {
+      width: 80%;
+    }
+    .h1 {
+      width: 80%;
+    }
+    .p {
+      width: 80%;
+    }
+  }
+}

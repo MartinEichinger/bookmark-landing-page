@@ -6,6 +6,7 @@ import {Footer} from '../Footer/Footer';
 import {DivPctTxtButton} from '../DivPctTxtButton/DivPctTxtButton';
 import {DivTxtTabs} from '../DivTxtTabs/DivTxtTabs';
 
+import {DivTxtCards} from '../DivTxtCards/DivTxtCards';
 
 class App extends React.Component {
   constructor(props) {
@@ -176,6 +177,55 @@ class App extends React.Component {
       },
     ];
 
+    this.propsExtension = {
+      name: 'divExtension',
+      nav: 'Extension',
+      h1Txt: 'Download the extension',
+      pTxt: "We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.",
+    };
+
+    this.propsCards = [
+      {
+        name: 'divCardChrome',
+        nav: 'Card',
+        imgSrc: './images/logo-chrome.svg',
+        h1Txt: 'Add to Chrome',
+        pTxt: 'Minimum version 62',
+        btn: [{
+                txt: 'Add & Install Extension',
+                link: '#',
+                img: ''
+              }
+            ]
+      },
+      {
+        name: 'divCardFirefox',
+        nav: 'Card',
+        imgSrc: './images/logo-firefox.svg',
+        h1Txt: 'Add to Firefox',
+        pTxt: 'Minimum version 55',
+        btn: [{
+                txt: 'Add & Install Extension',
+                link: '#',
+                img: ''
+              }
+            ]
+      },
+      {
+        name: 'divCardOpera',
+        nav: 'Card',
+        imgSrc: './images/logo-opera.svg',
+        h1Txt: 'Add to Opera',
+        pTxt: 'Minimum version 46',
+        btn: [{
+                txt: 'Add & Install Extension',
+                link: '#',
+                img: ''
+              }
+            ]
+      }
+    ];
+
     this.handleGetStarted = this.handleGetStarted.bind(this);
   }
 
@@ -189,6 +239,7 @@ class App extends React.Component {
         <Nav propsDiv={this.propsNav} />
         <DivPctTxtButton propsDiv={this.propsBookmarkManager} />
         <DivTxtTabs propsDiv={this.propsFeatures} propsTab={this.propsFeaturesTabs} />
+        <DivTxtCards propsDiv={this.propsExtension} propsCards={this.propsCards} />
         <Footer propsDiv={this.propsFooter} />
       </div>
     );

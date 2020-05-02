@@ -6,7 +6,7 @@ $SoftRed: hsl(0, 94%, 66%);
 $GrayishBlue: hsl(229, 8%, 60%);
 $VeryDarkBlue: hsl(229, 31%, 21%);
 
-.divFeatures {
+.divExtension {
   font-family: 'Rubik', sans-serif;
   color: $VeryDarkBlue;
 
@@ -18,7 +18,7 @@ $VeryDarkBlue: hsl(229, 31%, 21%);
   flex-flow: row-reverse nowrap;
   justify-content: space-between;
 
-  .blockFeatures {
+  .blockExtension {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -40,42 +40,21 @@ $VeryDarkBlue: hsl(229, 31%, 21%);
       line-height: normal;
       text-align: center;
     }
-    .blockTabs {
+    .cards {
       margin-top: 25px;
-      width: 70%;
+      width: 90%;
       margin-left: auto;
       margin-right: auto;
 
       display: flex;
       flex-flow: row nowrap;
       justify-content: center;
-      .tabs {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        width: 200px;
-        font-size: 14px;
-        color: $GrayishBlue;
-        border-bottom: 1px solid $GrayishBlue;
-        cursor: pointer;
-        text-decoration: none;
-        &:hover{
-          color: $SoftRed;
-        }
-      }
-      .active {
-        font-weight: 600;
-        color: $VeryDarkBlue;
-        border-bottom: 2px solid $SoftRed;
-        &:hover {
-          color: $VeryDarkBlue;
-        }
-      }
     }
   }
 }
 
 @media screen and (max-width: 768px) {
-  .divFeatures {
+  .blockExtension {
     img {
       width: 60%;
     }
@@ -89,7 +68,7 @@ $VeryDarkBlue: hsl(229, 31%, 21%);
 }
 
 @media screen and (max-width: 500px) {
-  .divFeatures {
+  .blockExtension {
     img {
       width: 80%;
     }
